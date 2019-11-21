@@ -4,7 +4,7 @@
         <el-aside>
             <el-menu>
                 <el-submenu :index="menu.enName" v-for="(menu, index) in menus">
-                    <template slot="title"><i class="el-icon-message"></i>导航一</template>
+                    <template slot="title"><i class="el-icon-message"></i>{{menu.name}}</template>
                     <el-menu-item-group>
                       <el-menu-item v-for="(submenu, subIndex) in menu.submenus" 
                         :index="menu.enName +'-' + submenu.enName" @click="goPage(menu.path + submenu.path)">
